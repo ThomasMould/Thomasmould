@@ -9,20 +9,18 @@ body, html {
     flex-direction: column;
 }
 
-.centered-content {
-    text-align: center;
-}
-
-.spline-viewer {
-    width: 100%;
-    height: 300px; /* Adjust the height as needed */
-    margin-bottom: 20px; /* Space between the 3D object and the text */
-}
-
 .centered-text {
+    text-align: center;
     font-size: 48px;
     font-weight: 300; /* Lato Light */
     line-height: 96px; /* Double the font size */
+}
+
+.centered-text .emoji {
+    font-size: 96px; /* Double the font size for the emoji */
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Normal line height for the emoji */
 }
 
 .centered-text .company {
