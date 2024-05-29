@@ -2,11 +2,11 @@ body, html {
     height: 100%;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
     background-color: #f0f0f0;
-    flex-direction: column;
 }
 
 .centered-text {
@@ -25,4 +25,22 @@ body, html {
 
 .centered-text .company {
     font-weight: 700; /* Lato Bold */
+}
+
+.get-in-touch {
+    position: absolute;
+    bottom: 20px; /* Adjust this value as needed */
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700; /* Lato Bold */
+    color: #000;
+    background-color: transparent;
+    border: 2px solid grey;
+    border-radius: 50px; /* Makes the button round/pill-shaped */
+    cursor: pointer;
+    text-align: center;
+}
+
+.get-in-touch:hover {
+    background-color: #f0f0f0;
 }
