@@ -12,6 +12,7 @@ body, html {
     text-align: center;
     font-size: 48px;
     font-weight: 300; /* Lato Light */
+    line-height: 96px; /* Double the font size */
 }
 
 .centered-text .company {
