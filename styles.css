@@ -4,10 +4,16 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #f0f0f0;
 }
 
 .centered-text {
     text-align: center;
+    font-size: 48px;
+    font-weight: 300; /* Lato Light */
+}
+
+.centered-text .company {
+    font-weight: 700; /* Lato Bold */
 }
