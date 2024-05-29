@@ -9,6 +9,22 @@ body, html {
     background-color: #f0f0f0;
 }
 
+.top-left-circle {
+    position: absolute;
+    top: 50px; /* 50 pixels from the top */
+    left: 50px; /* 50 pixels from the left */
+    width: 50px;
+    height: 50px;
+    background-color: #000; /* Circle background color */
+    color: #fff; /* Text color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Font size for the letter "T" */
+    font-weight: 700; /* Bold text */
+}
+
 .centered-text {
     text-align: center;
     font-size: 48px;
