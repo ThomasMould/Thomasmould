@@ -1,62 +1,72 @@
 body, html {
-    height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: 'Lato', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #000;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100%;
 }
 
-.top-left-circle {
-    position: absolute;
-    top: 50px; /* 50 pixels from the top */
-    left: 50px; /* 50 pixels from the left */
-    width: 50px;
-    height: 50px;
-    background-color: #000; /* Circle background color */
-    color: #fff; /* Text color */
-    border-radius: 50%;
+.top-left-corner {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    font-size: .5vw; /* Adjust size as needed */
+    font-weight: 300; /* Lighter text */
+    z-index: 3; /* Ensure it's on top of other elements */
+}
+
+.section {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px; /* Font size for the letter "T" */
-    font-weight: 700; /* Bold text */
+    height: 90vh; /* 90% of the viewport height */
+    width: 100%;
+    position: relative;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .centered-text {
     text-align: center;
-    font-size: 48px;
+    font-size: 3vw; /* Using viewport width units for responsiveness */
     font-weight: 300; /* Lato Light */
-    line-height: 96px; /* Double the font size */
-}
-
-.centered-text .emoji {
-    font-size: 96px; /* Double the font size for the emoji */
-    margin: 0;
-    padding: 0;
-    line-height: 1; /* Normal line height for the emoji */
+    line-height: 1.5; /* Line height relative to font size */
+    width: 90%; /* 90% of the viewport width */
+    padding: 0 5%; /* 5% padding on left and right */
+    color: #EEECE3; 
 }
 
 .centered-text .company {
     font-weight: 700; /* Lato Bold */
 }
 
+.get-in-touch-link {
+    position: fixed;
+    bottom: 10vh; /* 5% of the viewport height from the bottom */
+    text-decoration: none;
+    z-index: 2; /* Ensure the link is above other content */
+    width: 100%; /* Ensure the link container takes full width */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+}
+
 .get-in-touch {
-    position: absolute;
-    bottom: 20px; /* Adjust this value as needed */
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 700; /* Lato Bold */
-    color: #000;
-    background-color: transparent;
-    border: 2px solid grey;
-    border-radius: 50px; /* Makes the button round/pill-shaped */
+    padding: 1.4vh 1.2vw; /* Increased padding */
+    font-size: 0.8vw; /* Smaller font size */
+    font-weight: 300; /* Lato Light */
+    color: #EEECE3; /* White text */
+    background-color: #000; /* Black background */
+    border: 0.1vw solid #EEECE3;; /* Smaller border width */
+    border-radius: 50px; /* Fixed border radius to maintain round shape */
     cursor: pointer;
     text-align: center;
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
 .get-in-touch:hover {
-    background-color: #f0f0f0;
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
 }
