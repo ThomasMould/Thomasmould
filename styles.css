@@ -47,7 +47,7 @@ body, html {
     font-weight: 300; /* Lato Light */
     color: #EEECE3; /* White text */
     background-color: #000; /* Black background */
-    border: 0.1vw solid #EEECE3; /* Smaller border width */
+    border: 3px solid #EEECE3; /* Fixed border width */
     border-radius: 50px; /* Fixed border radius to maintain round shape */
     cursor: pointer;
     text-align: center;
@@ -76,7 +76,7 @@ body, html {
 
 @media (max-width: 480px) {
     .centered-text {
-        font-size: 10vw; /* Larger font size for very small screens */
+        font-size: 8vw; /* Larger font size for very small screens */
         padding: 8%; /* Adjust padding for very small screens */
     }
     .get-in-touch {
