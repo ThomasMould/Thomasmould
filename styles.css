@@ -32,7 +32,7 @@ body, html {
 
 .get-in-touch-link {
     position: fixed;
-    bottom: 10vh; /* 10% of the viewport height from the bottom */
+    bottom: 18vh; /* 10% of the viewport height from the bottom */
     text-decoration: none;
     z-index: 2; /* Ensure the link is above other content */
     width: 100%; /* Ensure the link container takes full width */
@@ -44,7 +44,7 @@ body, html {
 .get-in-touch {
     padding: 1.4vh 1.2vw; /* Increased padding */
     font-size: 0.8vw; /* Smaller font size */
-    font-weight: 300; /* Lato Light */
+    font-weight: 400; /* Lato Light */
     color: #EEECE3; /* White text */
     background-color: #000; /* Black background */
     border: 3px solid #EEECE3; /* Fixed border width */
@@ -58,7 +58,7 @@ body, html {
 }
 
 .get-in-touch:hover {
-    background-color: #fff; /* White background on hover */
+    background-color: #EEECE3; /* White background on hover */
     color: #000; /* Black text on hover */
 }
 
@@ -80,7 +80,7 @@ body, html {
         padding: 8%; /* Adjust padding for very small screens */
     }
     .get-in-touch {
-        font-size: 5vw; /* Adjust button font size for very small screens */
-        padding: 2vh 5.5vw; /* Adjust padding for very small screens */
+        font-size: 3.5vw; /* Adjust button font size for very small screens */
+        padding: 1.5vh 5vw; /* Adjust padding for very small screens */
     }
 }
