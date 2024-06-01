@@ -6,15 +6,6 @@ body, html {
     height: 100%;
 }
 
-.top-left-corner {
-    position: fixed;
-    top: 2%;
-    left: 2%;
-    font-size: .5vw; /* Adjust size as needed */
-    font-weight: 300; /* Lighter text */
-    z-index: 3; /* Ensure it's on top of other elements */
-}
-
 .section {
     display: flex;
     justify-content: center;
@@ -41,7 +32,7 @@ body, html {
 
 .get-in-touch-link {
     position: fixed;
-    bottom: 10vh; /* 5% of the viewport height from the bottom */
+    bottom: 10vh; /* 10% of the viewport height from the bottom */
     text-decoration: none;
     z-index: 2; /* Ensure the link is above other content */
     width: 100%; /* Ensure the link container takes full width */
@@ -56,7 +47,7 @@ body, html {
     font-weight: 300; /* Lato Light */
     color: #EEECE3; /* White text */
     background-color: #000; /* Black background */
-    border: 0.1vw solid #EEECE3;; /* Smaller border width */
+    border: 0.1vw solid #EEECE3; /* Smaller border width */
     border-radius: 50px; /* Fixed border radius to maintain round shape */
     cursor: pointer;
     text-align: center;
@@ -69,4 +60,27 @@ body, html {
 .get-in-touch:hover {
     background-color: #fff; /* White background on hover */
     color: #000; /* Black text on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .centered-text {
+        font-size: 4vw; /* Larger font size for smaller screens */
+        padding: 0 4%; /* Adjust padding for smaller screens */
+    }
+    .get-in-touch {
+        font-size: 1.5vw; /* Adjust button font size for smaller screens */
+        padding: 1.2vh 1vw; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-text {
+        font-size: 10vw; /* Larger font size for very small screens */
+        padding: 8%; /* Adjust padding for very small screens */
+    }
+    .get-in-touch {
+        font-size: 5vw; /* Adjust button font size for very small screens */
+        padding: 2vh 5.5vw; /* Adjust padding for very small screens */
+    }
 }
