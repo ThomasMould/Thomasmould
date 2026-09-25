@@ -1,86 +1,63 @@
-body, html {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    background-color: #000;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    height: 100%;
+:root {
+  color-scheme: light;
+  --background: #f0f0f0; --foreground: #222222;
+  --card: #f0f0f0; --card-foreground: #222222;
+  --popover: #f0f0f0; --popover-foreground: #222222;
+  --primary: #222222; --primary-foreground: #f0f0f0;
+  --secondary: #e7e7e7; --secondary-foreground: #222222;
+  --muted: #e7e7e7; --muted-foreground: #5b5b5b;
+  --accent: #e7e7e7; --accent-foreground: #222222;
+  --destructive: #a92020; --border: #cccccc; --input: #cccccc;
+  --ring: #222222; --radius: 0;
 }
-
-.section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh; /* 90% of the viewport height */
-    width: 100%;
-    position: relative;
-    flex-shrink: 0; /* Prevent shrinking */
+* { box-sizing: border-box; }
+html { background: var(--background); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--background); color: var(--foreground);
+  font-family: "Instrument Sans", sans-serif; font-size: 1rem; font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
-
-.centered-text {
-    text-align: center;
-    font-size: 3vw; /* Using viewport width units for responsiveness */
-    font-weight: 300; /* Lato Light */
-    line-height: 1.5; /* Line height relative to font size */
-    width: 90%; /* 90% of the viewport width */
-    padding: 0 5%; /* 5% padding on left and right */
-    color: #EEECE3; 
+::selection { background: #222222; color: #f0f0f0; }
+h1, h2, p, ul { margin: 0; }
+h1, h2 { font: inherit; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+.introduction {
+  display: flex; flex-direction: column; justify-content: space-between;
+  gap: clamp(6rem, 18vh, 20rem); min-height: 100svh;
+  max-width: 126rem; margin-inline: auto;
+  padding: 2rem 3rem clamp(5rem, 10vh, 11rem);
 }
-
-.centered-text .company {
-    font-weight: 700; /* Lato Bold */
+.information-grid {
+  display: grid; grid-template-columns: 2fr repeat(4, minmax(0, 1fr));
+  column-gap: 1.5rem; align-items: start;
+  font-size: .875rem; line-height: 1.25; letter-spacing: -.01em;
 }
-
-.get-in-touch-link {
-    position: fixed;
-    bottom: 18vh; /* 10% of the viewport height from the bottom */
-    text-decoration: none;
-    z-index: 2; /* Ensure the link is above other content */
-    width: 100%; /* Ensure the link container takes full width */
-    display: flex;
-    justify-content: center; /* Center the button horizontally */
-    align-items: center; /* Center the button vertically */
+.identity p { margin-top: .2rem; }
+.information-column h2 { margin-bottom: 1rem; }
+.experience-list { display: grid; gap: 1rem; }
+.experience-list span { display: block; }
+.products ul, .practice ul { display: grid; gap: .5rem; }
+.portfolio-link { margin-top: 1rem; max-width: 9rem; }
+.statement {
+  width: min(48.5%, 55rem); font-size: clamp(2rem, 2.6vw, 2.75rem);
+  line-height: 1.15; letter-spacing: -.025em; text-wrap: pretty;
 }
-
-.get-in-touch {
-    padding: 1.4vh 1.2vw; /* Increased padding */
-    font-size: 0.8vw; /* Smaller font size */
-    font-weight: 700; /* Lato Light */
-    color: #EEECE3; /* White text */
-    background-color: #000; /* Black background */
-    border: 3px solid #EEECE3; /* Fixed border width */
-    border-radius: 50px; /* Fixed border radius to maintain round shape */
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-    justify-content: center; /* Center text horizontally */
-    align-items: center; /* Center text vertically */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+.statement p + p { margin-top: .9em; }
+@media (min-width: 1600px) { .information-grid { font-size: 1rem; } }
+@media (max-width: 1000px) {
+  .information-grid { grid-template-columns: 1.6fr repeat(4, minmax(0, 1fr)); column-gap: 1rem; }
+  .statement { width: min(75%, 46rem); }
 }
-
-.get-in-touch:hover {
-    background-color: #EEECE3; /* White background on hover */
-    color: #000; /* Black text on hover */
+@media (max-width: 700px) {
+  .introduction { min-height: 100svh; padding: 1.5rem 1.5rem 2rem; gap: 7rem; }
+  .information-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.25rem; font-size: .875rem; line-height: 1.3; }
+  .identity { grid-column: 1 / -1; margin-bottom: .5rem; }
+  .information-column h2 { margin-bottom: .8rem; }
+  .experience-list { gap: .8rem; }
+  .statement { width: 100%; font-size: clamp(1.625rem, 5vw, 2rem); line-height: 1.18; letter-spacing: -.02em; }
+  .statement p + p { margin-top: 1em; }
 }
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-    .centered-text {
-        font-size: 4vw; /* Larger font size for smaller screens */
-        padding: 0 4%; /* Adjust padding for smaller screens */
-    }
-    .get-in-touch {
-        font-size: 1.5vw; /* Adjust button font size for smaller screens */
-        padding: 1.2vh 1vw; /* Adjust padding for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .centered-text {
-        font-size: 8vw; /* Larger font size for very small screens */
-        padding: 8%; /* Adjust padding for very small screens */
-    }
-    .get-in-touch {
-        font-size: 3.5vw; /* Adjust button font size for very small screens */
-        padding: 1.5vh 5vw; /* Adjust padding for very small screens */
-    }
-}
+@media print { .introduction { min-height: auto; gap: 6rem; } .statement { width: 75%; } }
