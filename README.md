@@ -28,6 +28,6 @@ These changes support crawling and clear identification for searches such as “
 
 The layout has a centred, capped desktop width, additional space between Products & research and Practice entries, and more room below the introduction. Mobile uses two columns with the name above them. Instrument Sans Regular 400 loads from Google Fonts.
 
-Edit visible content and metadata in `index.html`; edit presentation in `styles.css`. Keep the structured profile data consistent with the visible biography. No Google Analytics or other tracking code is included in this package; the current thomasmould.com page's analytics snippet is not carried over.
+Edit visible content and metadata in `index.html`; edit presentation in `styles.css`. Keep the structured profile data consistent with the visible biography. The page includes the existing Google tag with measurement ID `G-YFNV6D4T52` so tracking continues when the replacement site is published. Keep only one copy of that tag if your GitHub setup injects it separately.
 
 This package does not itself change GitHub, domain settings, or the currently hosted website.
